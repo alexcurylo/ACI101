@@ -1,5 +1,9 @@
 import Foundation
 import UIKit
+//
+// Added to test crash reporting, then removed after testing completed
+//
+import AppCenterCrashes
 
 class EditEntryViewController: UIViewController
 {
@@ -26,6 +30,11 @@ class EditEntryViewController: UIViewController
 
     @objc func onSave(_ sender: UIBarButtonItem)
     {
+        //
+        // Added to test crash reporting, then removed after testing completed
+        //
+        MSCrashes.generateTestCrash()
+
         entry?.title = titleTextField.text!
         entry?.content = contentTextView.text!
         
